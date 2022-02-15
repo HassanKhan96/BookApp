@@ -1,0 +1,42 @@
+
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: rgb(226, 226, 226);
+}
+
+.row-container {
+    width: 100%;
+    height: 100%;
+}
+
+.auth-card {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    color: rgb(65, 65, 65);
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.btn-font {
+    color: #fff;
+}
+
+.bottom-text {
+    font-size: 14px;
+}

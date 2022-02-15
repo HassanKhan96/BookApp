@@ -1,7 +1,12 @@
-.loadin-container {
+.loading-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.loading-container span {
+    margin: 1.5rem;
 }

@@ -17,6 +17,12 @@ class BookRead {
 class Payment {
     @Prop()
     paymentType: string
+
+    @Prop()
+    amount: number
+
+    @Prop()
+    subscriptionDate: Date
 }
 
 @Schema()

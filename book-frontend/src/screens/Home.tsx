@@ -5,6 +5,7 @@ import { getUser } from "../redux/user/actions/user.actions";
 import { useEffect, useLayoutEffect } from 'react';
 import { setAuthToken } from "../redux/auth/actions/Auth.actions";
 import Loading from "./Loading";
+import Payment from "./Payment";
 
 const Home = (): JSX.Element => {
     const location = useLocation();
@@ -27,9 +28,14 @@ const Home = (): JSX.Element => {
         return <Navigate to='/login' state={{ from: location }} replace />;
     }
 
-    if(!user.loading){
+    if(user.loading){
         return <Loading />
     }
+
+    if(!user?.data?.paymentInfo){
+        return <Payment />
+    }
+
     return (
         <div>
             <NavbarComponent />

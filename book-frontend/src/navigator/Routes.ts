@@ -1,7 +1,7 @@
 import Home from "../screens/Home";
 import Login from "../screens/Login";
-import Pricing from "../screens/Pricing";
 import Register from "../screens/Register";
+import Payment from '../screens/Payment';
 
 
 export const routes = [
@@ -18,7 +18,7 @@ export const routes = [
         component: Register
     },
     {
-        path: '/pricing',
-        component: Pricing
+        path: '/payment',
+        component: Payment
     }
 ]

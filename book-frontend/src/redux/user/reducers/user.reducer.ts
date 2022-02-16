@@ -1,4 +1,4 @@
-import { GET_USER, GET_USER_FAILED, GET_USER_SUCCESS } from "../../types";
+import { GET_USER, GET_USER_FAILED, GET_USER_SUCCESS, USER_PAYMENT_SUCCESS } from "../../types";
 
 const INITIAL_STATE = {
     data: null,

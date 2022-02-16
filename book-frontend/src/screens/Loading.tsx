@@ -1,14 +1,16 @@
 import './css/Loading.css';
 import { Spinner } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getUser } from '../redux/user/actions/user.actions';
 
 const Loading = (): JSX.Element => {
 
-    const user = useSelector((state: any) => state.user)
-    
-    if(!user.paymentInfo){
-        //start here tomorrow
-    }
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getUser())
+    },[])
 
     return (
         <div className="loading-container border">

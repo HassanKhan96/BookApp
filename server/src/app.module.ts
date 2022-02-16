@@ -8,16 +8,23 @@ import { ConfigModule } from '@nestjs/config';
 import { UserModule } from './user/user.module';
 import { APP_GUARD } from '@nestjs/core';
 import { RoleGuard } from './auth/role.guard';
+import { PaymentModule } from './payment/payment.module';
+import { StripeModule } from 'nestjs-stripe';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true
     }),
+    StripeModule.forRoot({
+      apiKey: process.env.STRIPE_SECRET_KEY,
+      apiVersion: '2020-08-27'
+    }),
     BookModule, 
     MongooseModule.forRoot(process.env.MONGO_URI),
     AuthModule,
-    UserModule
+    UserModule,
+    PaymentModule
   ],
   controllers: [AppController],
   providers: [
